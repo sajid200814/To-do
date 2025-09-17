@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo App</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Firebase SDK v8 -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+</head>
+<body>
+  <h1>My Todo List</h1>
+
+  <!-- Auth Section -->
+  <div class="auth-section">
+    <input type="email" id="emailInput" placeholder="Email" />
+    <input type="password" id="passwordInput" placeholder="Password" />
+    <button id="signUpBtn">Sign Up</button>
+    <button id="signInBtn">Sign In</button>
+  </div>
+
+  <!-- Sign Out Button (outside auth section) -->
+  <div class="signout-section">
+    <button id="signOutBtn" style="display:none;">Sign Out</button>
+  </div>
+
+  <!-- Task Input -->
+  <div class="input-section" style="display:none;">
+    <input type="text" id="taskInput" placeholder="Enter a task" />
+    <button id="addBtn">Add</button>
+  </div>
+
+  <!-- Task List -->
+  <ul id="taskList" style="display:none;"></ul>
+
+  <!-- Firebase Config -->
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBtxFh_va78cfQqZqw6FensbD7lm1ZjhPM",
+      authDomain: "to-do-000.firebaseapp.com",
+      projectId: "to-do-000",
+      storageBucket: "to-do-000.firebasestorage.app",
+      messagingSenderId: "821552276781",
+      appId: "1:821552276781:web:018b00234003ba9543dfa4",
+      measurementId: "G-VY1RLMS673"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <!-- App Logic -->
+  <script src="script.js"></script>
+</body>
+</html>
